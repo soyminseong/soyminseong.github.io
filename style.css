@@ -1,0 +1,202 @@
+/* ===== chanh.ee / beking0912 스타일: 밝고 깔끔한 미니멀 ===== */
+/* 색상이나 폭을 바꾸고 싶으면 아래 값만 수정하세요 */
+:root {
+  --bg: #ffffff;        /* 배경 (흰색) */
+  --text: #1a1a1a;      /* 글자색 */
+  --muted: #6b7280;     /* 흐린 글자 (날짜, 설명) */
+  --accent: #ba0c2f;    /* OSU 스칼렛 (링크 hover, 강조색) */
+  --border: #e5e7eb;    /* 구분선 */
+  --max-width: 720px;   /* 본문 폭 (좁을수록 학술 느낌) */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Charter", "Bitstream Charter", "Sitka Text", Cambria,
+               Georgia, "Apple SD Gothic Neo", "맑은 고딕", serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* 링크: 평소엔 본문과 같은 색 + 밑줄 없음, 마우스 올리면 스칼렛 + 밑줄 */
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ===== 상단 네비게이션 ===== */
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 28px;
+  margin-bottom: 44px;
+}
+.nav-links a { margin-left: 22px; font-weight: 400; font-size: 13px; color: #868e92; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.nav-links a.active { font-weight: 700; }   /* 선택된 메뉴: 볼드 (색 강조 없음) */
+.social a { margin-left: 14px; color: var(--muted); font-size: 0.9rem; }
+
+/* ===== 히어로 (사진 + 소개) ===== */
+.hero { display: flex; gap: 28px; align-items: center; margin-bottom: 56px; }
+.avatar {
+  width: 180px; height: auto;
+  border-radius: 0;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+.hero-text { font-family: Arial, "Helvetica Neue", Helvetica, "Apple SD Gothic Neo", sans-serif; }
+.hero-text h1 {
+  font-family: "Charter", "Bitstream Charter", Georgia, serif;   /* 이름만 Charter */
+  font-size: 1.7rem; margin-bottom: 14px; font-weight: 700;
+}
+.hanja { color: var(--muted); font-weight: 400; font-size: 1.1rem; }
+.hero-text p { margin-bottom: 12px; }
+.semi { font-weight: 500; }   /* 중간 굵기 (medium) */
+.email-line { color: var(--muted); font-size: 12.5px; margin-top: 14px; }
+.email-line em { font-style: normal; }
+
+/* ===== 섹션 공통 ===== */
+.block { margin-bottom: 52px; }
+.block h2 {
+  font-size: 17.5px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== Research Fields 태그 ===== */
+.fields { display: flex; flex-wrap: wrap; gap: 10px; }
+.field {
+  border: 1px solid var(--border);
+  background: #f9fafb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-family: -apple-system, "Apple SD Gothic Neo", sans-serif;
+}
+
+/* ===== What's New 타임라인 (스크롤되는 박스) ===== */
+.timeline-scroll {
+  max-height: 200px;        /* ← 박스 높이. 이 값을 키우면 더 많이 보입니다 */
+  overflow-y: auto;
+  padding: 4px 16px 4px 4px;
+}
+/* 작은 스크롤바 (크롬/사파리) */
+.timeline-scroll::-webkit-scrollbar { width: 8px; }
+.timeline-scroll::-webkit-scrollbar-track { background: transparent; }
+.timeline-scroll::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+.timeline-scroll::-webkit-scrollbar-thumb:hover { background: #a0a0a0; }
+/* 작은 스크롤바 (파이어폭스) */
+.timeline-scroll { scrollbar-width: thin; scrollbar-color: #c4c4c4 transparent; }
+
+/* 점-선으로 이어지는 타임라인 */
+.timeline { list-style: none; position: relative; padding-left: 30px; }
+.timeline::before {           /* 세로 연결선 */
+  content: "";
+  position: absolute;
+  left: 6px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: #e0bcc3;
+}
+.timeline li { position: relative; margin-bottom: 14px; }
+.timeline li:last-child { margin-bottom: 4px; }
+.timeline li::before {        /* 2중 동심원: 진한 안쪽 점 + 연한 바깥 링 */
+  content: "";
+  position: absolute;
+  left: -31px; top: 4px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 4px solid #e0bcc3;
+}
+.tl-date { font-weight: 700; display: block; margin-bottom: 3px; }
+.timeline p { margin: 0; color: #3f4443; font-size: 12.5px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.timeline p a { font-style: italic; }   /* 페이퍼·프로젝트 제목 요약 링크는 이탤릭 */
+
+/* ===== Publications ===== */
+.pub-cat {                       /* 카테고리 소제목 (Job Market Paper 등) */
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 48px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--border);
+}
+.pub-item { margin-bottom: 16px; padding-left: 18px; }   /* 헤딩 아래 논문 들여쓰기 */
+.pub-title { font-weight: 600; font-size: 14.5px; margin-bottom: 2px; color: var(--text); }
+a.title-link { color: inherit; }
+a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 링크: 검정 유지, hover 시 밑줄 */
+.pub-meta { font-weight: 400; color: var(--text); }
+.pub-cite { font-size: 12px; margin-bottom: 2px; }
+.pub-note { color: var(--text); font-size: 12px; margin-bottom: 2px; }
+.pub-authors { color: #3f4443; font-size: 13px; margin-bottom: 1px; }   /* 저자 줄 */
+.pub-venue   { color: #3f4443; font-size: 13px; margin-bottom: 2px; }   /* 저널 줄 (저널명 볼드) */
+.pub-venue strong { font-style: italic; }           /* 저널명 이탤릭 */
+.pub-venue .status { font-style: italic; }           /* 상태 문구(Revise and Resubmit)는 이탤릭 */
+.me { font-weight: 400; color: #3f4443; }            /* 본인 이름: 볼드 없이 진회색 */
+.pub-link { text-decoration: underline; margin-left: 7px; }  /* Paper·Website·Code 링크 */
+.pub-foot { color: #868e92; font-size: 12px; margin: -6px 0 14px 18px; }  /* 작은 회색 노트 */
+.predoc-head { margin-top: 72px; }                   /* 예비박사 섹션 시작 전 간격 늘리기 */
+.predoc .pub-title,
+.pub-title.black { color: var(--text); }             /* 검정 제목 (예비박사 / 진행중 연구 등) */
+.predoc .pub-title  { font-size: 13.5px; }           /* 예비박사: 제목·저자·저널 -1px */
+.predoc .pub-authors,
+.predoc .pub-venue  { font-size: 12px; }
+
+/* 논문 제목 링크: 평소 스칼렛, hover 시 밑줄 */
+a.paper-link { color: var(--accent); }
+
+/* 접히는 초록 (클릭하면 펼쳐짐) */
+.abstract { margin-top: 4px; }
+.abstract summary {
+  cursor: pointer;
+  display: inline-block;
+  color: var(--muted);
+  font-size: 0.88em;
+  font-family: -apple-system, "Apple SD Gothic Neo", sans-serif;
+  list-style: none;
+}
+.abstract summary::-webkit-details-marker { display: none; }
+.abstract summary::before { content: "▸ "; }
+.abstract[open] summary::before { content: "▾ "; }
+.abstract summary:hover { color: var(--accent); }
+.abstract p {
+  margin-top: 6px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 12.5px;
+  color: #646a6e;
+  line-height: 1.6;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}
+
+/* ===== 하단 ===== */
+footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ===== 모바일 대응 ===== */
+@media (max-width: 600px) {
+  .hero { flex-direction: column; align-items: center; text-align: center; }
+  .pub { flex-direction: column; }
+  .pub-thumb { width: 100%; height: 140px; }
+  .news-list li { flex-direction: column; gap: 2px; }
+}

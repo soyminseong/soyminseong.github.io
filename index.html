@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- chanh.ee 스타일의 미니멀 학술 포트폴리오 사이트 -->
+<!-- "▼" 표시가 있는 부분을 본인 정보로 바꾸면 됩니다. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minseong Kang</title>
+  <!-- Lato 글꼴 불러오기 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+
+  <!-- ===== 상단 네비게이션 ===== -->
+  <nav class="topnav">
+    <div class="nav-links">
+      <a href="index.html" class="active">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="https://www.dropbox.com/scl/fi/48osibfijt5z0mf38jp2m/Curriculum-Vitae.pdf?rlkey=xd2ae0v0qjxoqb2pn10fdlskb&e=1&st=66lctk7c&dl=0" target="_blank">CV</a>
+    </div>
+  </nav>
+
+  <!-- ===== 히어로 (사진 + 소개) ===== -->
+  <section id="about" class="hero">
+    <!-- ▼ 프로필 사진: profile.jpg 파일을 portfolio 폴더에 넣으면 자동으로 보입니다 -->
+    <img class="avatar" src="profile.jpg" alt="Minseong Kang"
+         onerror="this.style.background='#e8e8e8';this.removeAttribute('src');" />
+    <div class="hero-text">
+      <h1>Minseong Kang</h1>
+      <p>
+        I am a Ph.D. candidate in the
+        <a href="https://aede.osu.edu/" target="_blank">Department of Agricultural,
+        Environmental, and Development Economics</a> at
+        <a href="https://www.osu.edu/" target="_blank">The Ohio State University</a>.
+      </p>
+      <p>
+        My research investigates how agri-food supply chains adapt to extreme
+        weather events and structural shifts through the lens of industrial
+        organization and trade theory.
+      </p>
+      <p>
+        <span class="semi">I'm on the 2026–27 academic job market.</span>
+      </p>
+      <p class="email-line">
+        Email: <a href="mailto:kang.1327@osu.edu">kang.1327 <em>[at]</em> osu <em>[dot]</em> edu</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Research Fields ===== -->
+  <section id="research" class="block">
+    <h2>Research Fields</h2>
+    <div class="fields">
+      <span class="field">Agricultural Economics</span>
+      <span class="field">Industrial Organization</span>
+      <span class="field">International Trade</span>
+      <span class="field">Commodity Markets</span>
+      <span class="field">Supply Chain Resilience</span>
+    </div>
+  </section>
+
+  <!-- ===== Recent News & Publications (최근 소식) ===== -->
+  <section id="news" class="block">
+    <h2>What's New</h2>
+    <!-- 박스 안에서 스크롤됩니다. 높이는 style.css의 .timeline-scroll max-height로 조절 -->
+    <div class="timeline-scroll">
+      <ul class="timeline">
+        <!-- ▼ li 하나가 소식 하나입니다. 복사해서 늘리거나 지우세요. -->
+        <li>
+          <span class="tl-date">Jul 2026</span>
+          <p>My JMP extension, "<em>Dynamic Trade Reallocation under Inland Waterway Disruptions</em>," is
+          accepted as paper presentation in the <strong>AAEA 2026</strong>! Catch me in
+          Kansas City!</p>
+        </li>
+        <li>
+          <span class="tl-date">May 2026</span>
+          <p>"<a href="https://onlinelibrary.wiley.com/doi/10.1002/ajae.70063" target="_blank">Food
+          Inflation Pass-through from Agricultural Imports in a Small Open Economy</a>" is officially out
+          in <strong>American Journal of Agricultural Economics</strong>! Proud to mark my first
+          contribution to AJAE! 🥳</p>
+        </li>
+        <li>
+          <span class="tl-date">Apr 2026</span>
+          <p>Two new outreach reports on the U.S.–Iran conflict are live: one on
+          <a href="https://aede.osu.edu/sites/default/files/2026-04/Kang%20and%20Lee%20-%20Corn%20Nitrogen%20Rates.pdf" target="_blank"><em>nitrogen
+          rates for corn</em></a>, and another on
+          <a href="https://gelade1.substack.com/p/has-the-us-iran-war-raised-prices" target="_blank"><em>soy
+          price impacts</em></a>.</p>
+        </li>
+        <li>
+          <span class="tl-date">Apr 2026</span>
+          <p>Had a great time presenting my renewable diesel research at the
+          <strong>NCCC-134</strong> meeting in Chicago!</p>
+        </li>
+        <li>
+          <span class="tl-date">Mar 2026</span>
+          <p>My <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5944294" target="_blank">JMP</a>
+          has received an R&amp;R at the <strong>AJAE</strong>! 🤞</p>
+        </li>
+        <li>
+          <span class="tl-date">Feb 2026</span>
+          <p>Our article on
+          <a href="https://www.choicesmagazine.org/choices-magazine/submitted-articles/uneven-state-level-exposure-to-potential-us-tariff-disputes-with-canada-and-mexico" target="_blank">state-level
+          exposure to U.S. tariff disputes</a> is now live in <strong>Choices</strong>. Go give
+          it a read! 👀</p>
+        </li>
+        <li>
+          <span class="tl-date">Jul 2025</span>
+          <p>Presented my work on <em>the resilience benefits of the renewable diesel boom</em> at
+          <strong>AAEA 2025</strong>.</p>
+        </li>
+        <li>
+          <span class="tl-date">Mar 2025</span>
+          <p>My
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5944294" target="_blank">barge
+          disruption economic costs paper</a> was accepted to and presented at the
+          <strong>NCCC-134</strong> meeting in Chicago.</p>
+        </li>
+        <li>
+          <span class="tl-date">Jul 2024</span>
+          <p>Presented my research on the
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5944294" target="_blank">economic
+          cost of barge disruptions</a> at <strong>AAEA 2024</strong>.</p>
+        </li>
+        <li>
+          <span class="tl-date">Mar 2024</span>
+          <p>Presented my
+          <a href="https://onlinelibrary.wiley.com/doi/10.1002/ajae.70063" target="_blank">food inflation
+          pass-through paper</a> at <strong>MEA 2024</strong>.</p>
+        </li>
+        <li>
+          <span class="tl-date">Mar 2023</span>
+          <p>Two papers are now in print: one on
+          <a href="https://doi.org/10.1002/agr.21805" target="_blank">broiler packing market power</a>
+          in <strong>Agribusiness</strong> and another on
+          <a href="https://www.mdpi.com/2077-0472/13/3/577" target="_blank">vegetable price volatility</a>
+          in <strong>Agriculture</strong>. 🎉</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 하단 ===== -->
+  <footer>
+    <p>© 2026 Minseong Kang</p>
+  </footer>
+
+</main>
+</body>
+</html>
