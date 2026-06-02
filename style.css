@@ -125,6 +125,7 @@ a:hover { color: var(--accent); text-decoration: underline; }
 .tl-date { font-weight: 700; display: block; margin-bottom: 3px; }
 .timeline p { margin: 0; color: #3f4443; font-size: 12.5px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 .timeline p a { font-style: italic; }   /* 페이퍼·프로젝트 제목 요약 링크는 이탤릭 */
+.timeline p a.noital { font-style: normal; }   /* 예외: 이탤릭 제외 (예: JMP) */
 
 /* ===== Publications ===== */
 .pub-cat {                       /* 카테고리 소제목 (Job Market Paper 등) */
@@ -149,12 +150,18 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .me { font-weight: 400; color: #3f4443; }            /* 본인 이름: 볼드 없이 진회색 */
 .pub-link { text-decoration: underline; margin-left: 7px; }  /* Paper·Website·Code 링크 */
 .pub-foot { color: #868e92; font-size: 12px; margin: -6px 0 14px 3px; }  /* 작은 회색 노트 */
-.predoc-head { margin-top: 72px; }                   /* 예비박사 섹션 시작 전 간격 늘리기 */
+.predoc-head { margin-top: 72px; color: #1a1a1a; }   /* 예비박사 헤딩: 간격 + 어두운 색 */
+summary.predoc-head { cursor: pointer; list-style: none; }   /* 클릭 가능 */
+summary.predoc-head::-webkit-details-marker { display: none; }   /* 기본 삼각형 숨김 */
+.fold-hint { font-size: 11.8px; font-weight: 400; color: #868e92;
+  font-family: -apple-system, "Apple SD Gothic Neo", sans-serif; }   /* 작은 힌트 */
+.predoc-fold[open] .fold-hint::after { content: ""; }
 
 /* ===== Teaching ===== */
-.teach-inst { font-weight: 700; font-size: 14px; margin: 4px 0 10px 3px; }   /* 기관명 */
+.teach-inst { font-weight: 700; font-size: 14px; margin: 4px 0 18px 3px; }   /* 기관명 (볼드, 아래 여백) */
 .course-list { list-style: none; margin: 0 0 12px 3px; padding: 0; }
-.course-list li { font-size: 13px; margin-bottom: 9px; color: var(--text); }
+.course-list li { list-style: none; font-size: 13px; margin-bottom: 9px; line-height: 1.2; color: var(--text); }
+.course-list li::marker { content: ""; }   /* bullet 완전 제거 */
 .course-code { display: inline-block; min-width: 92px; }   /* 강의 코드 (정렬용) */
 .predoc .pub-title,
 .pub-title.black { color: var(--text); }             /* 검정 제목 (예비박사 / 진행중 연구 등) */
