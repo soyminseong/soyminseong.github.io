@@ -42,12 +42,22 @@ a:hover { color: var(--accent); text-decoration: underline; }
   padding-bottom: 28px;
   margin-bottom: 44px;
 }
-.nav-links a { margin-left: 22px; font-weight: 400; font-size: 13px; color: #868e92; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.nav-links a { margin-left: 22px; font-weight: 400; font-size: 13px; color: #868e92; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; letter-spacing: -0.1px; }
 .nav-links a.active { font-weight: 700; }   /* 선택된 메뉴: 볼드 (색 강조 없음) */
 .social a { margin-left: 14px; color: var(--muted); font-size: 0.9rem; }
 
 /* ===== 히어로 (사진 + 소개) ===== */
 .hero { display: flex; gap: 28px; align-items: center; margin-bottom: 56px; }
+.hero-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.avatar-email {
+  margin-top: 8px;
+  font-size: 12px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #646a6e;
+  text-align: center;
+  word-break: break-all;
+  max-width: 180px;
+}
 .avatar {
   width: 180px; height: auto;
   border-radius: 0;
@@ -129,8 +139,9 @@ a:hover { color: var(--accent); text-decoration: underline; }
 .timeline p strong { font-weight: 580; }   /* 저널·컨퍼런스 이름 굵기 */
 
 /* Publications 전반 자간 줄이기 (abstract 제외) */
-#publications { letter-spacing: -0.2px; }
-#publications .abstract { letter-spacing: normal; }
+#publications { letter-spacing: -0.3px; }
+#publications .abstract,
+#publications .pub-cat { letter-spacing: normal; }   /* 초록·헤딩은 자간 제외 */
 
 /* ===== Publications ===== */
 .pub-cat {                       /* 카테고리 소제목 (Job Market Paper 등) */
@@ -151,6 +162,7 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .pub-venue strong { font-style: italic; }           /* 저널명 이탤릭 */
 .pub-venue .status { font-style: italic; }           /* 상태 문구(Revise and Resubmit)는 이탤릭 */
 .me { font-weight: 400; color: #3f4443; }            /* 본인 이름 색 */
+.contact-line { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; padding-left: 3px; }   /* Contact 이메일 줄 */
 .pub-link { text-decoration: underline; margin-left: 7px; }  /* Paper·Website·Code 링크 */
 .pub-foot { color: #868e92; font-size: 12px; margin: -6px 0 14px 3px; }  /* 작은 회색 노트 */
 .predoc-head { margin-top: 72px; color: #1a1a1a; }   /* 예비박사 헤딩: 간격 + 어두운 색 */
