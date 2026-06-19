@@ -139,9 +139,10 @@ a:hover { color: var(--accent); text-decoration: underline; }
 .timeline p strong { font-weight: 580; }   /* 저널·컨퍼런스 이름 굵기 */
 
 /* Publications 전반 자간 줄이기 (abstract 제외) */
-#publications { letter-spacing: -0.3px; }
+#publications, #extension { letter-spacing: -0.3px; }
 #publications .abstract,
-#publications .pub-cat { letter-spacing: normal; }   /* 초록·헤딩은 자간 제외 */
+#publications .pub-cat,
+#extension .pub-cat { letter-spacing: normal; }   /* 초록·헤딩은 자간 제외 */
 
 /* ===== Publications ===== */
 .pub-cat {                       /* 카테고리 소제목 (Job Market Paper 등) */
