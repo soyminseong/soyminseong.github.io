@@ -25,10 +25,15 @@
   <nav class="topnav">
     <div class="nav-links">
       <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html" class="active">Teaching</a>
-      <a href="extension.html">Extension</a>
       <a href="https://www.dropbox.com/scl/fi/48osibfijt5z0mf38jp2m/Curriculum-Vitae.pdf?rlkey=xd2ae0v0qjxoqb2pn10fdlskb&e=1&st=66lctk7c&dl=0" target="_blank">CV</a>
+      <a href="publications.html">Research</a>
+      <span class="nav-dropdown">
+        <a class="nav-more active" onclick="this.parentNode.classList.toggle('open')">More <span class="caret">▾</span></a>
+        <span class="dropdown-menu">
+          <a href="teaching.html" class="active">Teaching</a>
+          <a href="extension.html">Extension</a>
+        </span>
+      </span>
     </div>
   </nav>
 
