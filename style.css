@@ -168,7 +168,7 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .media-badge {                /* 미디어 보도 배지 (둥근 사각) */
   display: inline-block; margin-left: 9px; padding: 1.5px 8px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 11px; font-weight: 600; line-height: 1.5;
+  font-size: 10px; font-weight: 400; line-height: 1.5;
   color: #9a6320; background: #f8eede; border-radius: 6px;
   text-decoration: none; letter-spacing: normal; vertical-align: middle;
 }
