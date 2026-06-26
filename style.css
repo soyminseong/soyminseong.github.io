@@ -184,11 +184,11 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .data-item > summary::before { content: "▸"; font-size: 1.5em; margin-right: 9px; }
 .data-item[open] > summary::before { content: "▾"; }
 .data-desc { color: #646a6e; font-size: 14px; margin: 1px 0 14px; line-height: 1.6; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
-.data-bullets { margin: 22px 0 0; padding-left: 0; list-style: square inside; }
-.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 14px; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
-.data-bullets li::marker { color: #646a6e; }
+.data-bullets { margin: 22px 0 0; padding-left: 0; list-style: none; }
+.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 14px; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; position: relative; padding-left: 1.3em; }
+.data-bullets li::before { content: "\25AA"; position: absolute; left: 0; color: #646a6e; }
 .data-bullets li:last-child { margin-bottom: 0; }
-.data-links { font-size: 16.5px; margin: 13px 0 9px; font-family: "Maple Mono", ui-monospace, monospace; }
+.data-links { font-size: 16.5px; margin: 18px 0 14px; font-family: "Maple Mono", ui-monospace, monospace; }
 .data-links a { text-decoration: underline; }
 .data-source { font-size: 14.5px; color: #646a6e; font-style: italic; margin: 4px 0 0; }
 .data-img { display: block; width: 500px; max-width: 100%; height: auto; margin: 8px 0 12px; border: 1px solid #000; }
