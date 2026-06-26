@@ -184,8 +184,9 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .data-item > summary::before { content: "▸"; font-size: 1.5em; margin-right: 9px; }
 .data-item[open] > summary::before { content: "▾"; }
 .data-desc { color: #646a6e; font-size: 14px; margin: 1px 0 14px; line-height: 1.6; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
-.data-bullets { margin: 16px 0 0; padding-left: 20px; list-style: square; }
-.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 10px; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.data-bullets { margin: 22px 0 0; padding-left: 0; list-style: square inside; }
+.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 14px; font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.data-bullets li::marker { color: #646a6e; }
 .data-bullets li:last-child { margin-bottom: 0; }
 .data-links { font-size: 16.5px; margin: 13px 0 9px; font-family: "Maple Mono", ui-monospace, monospace; }
 .data-links a { text-decoration: underline; }
