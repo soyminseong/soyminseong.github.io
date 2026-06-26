@@ -188,18 +188,6 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .data-links { font-size: 14.5px; margin: 13px 0 9px; }
 .data-links a { text-decoration: underline; }
 .data-source { font-size: 14.5px; color: #646a6e; font-style: italic; margin: 4px 0 0; }
-.data-cite {
-  background: #f6f6f4; border: 1px solid #ececec; border-radius: 0;
-  padding: 12px 15px; margin: 0 0 10px; font-size: 13px; color: #4a4f4e;
-  line-height: 1.55; letter-spacing: normal;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-.data-cite p { margin: 0 0 6px; }
-.data-cite .cite-head { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
-.data-cite ul { margin: 0; padding-left: 18px; }
-.data-cite li { margin-bottom: 6px; }
-.data-cite li:last-child { margin-bottom: 0; }
-.data-cite a { text-decoration: underline; overflow-wrap: break-word; }
 .data-img { display: block; width: 500px; max-width: 100%; height: auto; margin: 8px 0 12px; border: 1px solid #000; }
 .me { font-weight: 400; color: #3f4443; }            /* 본인 이름 색 */
 .contact-line { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; padding-left: 3px; }   /* Contact 이메일 줄 */
