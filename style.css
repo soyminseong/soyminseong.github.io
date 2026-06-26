@@ -183,9 +183,11 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .data-item > summary::-webkit-details-marker { display: none; }
 .data-item > summary::before { content: "▸"; font-size: 1.5em; margin-right: 9px; }
 .data-item[open] > summary::before { content: "▾"; }
-.data-desc { color: #646a6e; font-size: 15px; margin: 1px 0 6px; }
-.data-desc-assembled { margin-top: 11px; }
-.data-links { font-size: 14.5px; margin: 13px 0 9px; }
+.data-desc { color: #646a6e; font-size: 14px; margin: 1px 0 14px; line-height: 1.6; }
+.data-bullets { margin: 16px 0 0; padding-left: 20px; list-style: square; }
+.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+.data-bullets li:last-child { margin-bottom: 0; }
+.data-links { font-size: 16.5px; margin: 13px 0 9px; }
 .data-links a { text-decoration: underline; }
 .data-source { font-size: 14.5px; color: #646a6e; font-style: italic; margin: 4px 0 0; }
 .data-img { display: block; width: 500px; max-width: 100%; height: auto; margin: 8px 0 12px; border: 1px solid #000; }
