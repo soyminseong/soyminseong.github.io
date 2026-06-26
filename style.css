@@ -178,14 +178,14 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .pub-venue .status { font-style: italic; }           /* 상태 문구(Revise and Resubmit)는 이탤릭 */
 /* ===== Data 페이지 ===== */
 .data-intro { color: #3f4443; font-size: 14.5px; margin: 0 0 22px 3px; }
-#data .pub-title { font-size: 16.5px; }
+#data .pub-title { font-size: 16.5px; font-family: "Lato", Arial, sans-serif; }
 .data-item > summary { cursor: pointer; display: inline-block; list-style: none; }
 .data-item > summary::-webkit-details-marker { display: none; }
 .data-item > summary::before { content: "▸"; font-size: 1.5em; margin-right: 9px; }
 .data-item[open] > summary::before { content: "▾"; }
-.data-desc { color: #646a6e; font-size: 14px; margin: 1px 0 14px; line-height: 1.6; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.data-desc { color: #646a6e; font-size: 14px; margin: 1px 0 14px; line-height: 1.6; font-family: "Lato", Arial, sans-serif; }
 .data-bullets { margin: 16px 0 0; padding-left: 20px; list-style: square; }
-.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 10px; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.data-bullets li { color: #646a6e; font-size: 14px; line-height: 1.6; margin-bottom: 10px; font-family: "Lato", Arial, sans-serif; }
 .data-bullets li:last-child { margin-bottom: 0; }
 .data-links { font-size: 16.5px; margin: 13px 0 9px; font-family: "Maple Mono", ui-monospace, monospace; }
 .data-links a { text-decoration: underline; }
