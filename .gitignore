@@ -1,1 +1,4 @@
 .DS_Store
+# 원본 CSV는 용량이 커서 제외 (다운로드는 zip으로 제공)
+mississippi_river_gage_stage_2006_2025.csv
+mississippi_river_station_metadata.csv

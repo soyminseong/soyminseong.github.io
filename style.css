@@ -176,6 +176,31 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
 .pub-venue   { color: #3f4443; font-size: 13px; margin-bottom: 2px; }   /* 저널 줄 (저널명 볼드) */
 .pub-venue strong { font-style: italic; }           /* 저널명 이탤릭 */
 .pub-venue .status { font-style: italic; }           /* 상태 문구(Revise and Resubmit)는 이탤릭 */
+/* ===== Data 페이지 ===== */
+.data-intro { color: #3f4443; font-size: 14.5px; margin: 0 0 22px 3px; }
+#data .pub-title { font-size: 16.5px; }
+.data-item > summary { cursor: pointer; display: inline-block; list-style: none; }
+.data-item > summary::-webkit-details-marker { display: none; }
+.data-item > summary::before { content: "▸"; font-size: 1.5em; margin-right: 9px; }
+.data-item[open] > summary::before { content: "▾"; }
+.data-desc { color: #646a6e; font-size: 15px; margin: 1px 0 6px; }
+.data-desc-assembled { margin-top: 11px; }
+.data-links { font-size: 14.5px; margin: 13px 0 9px; }
+.data-links a { text-decoration: underline; }
+.data-source { font-size: 14.5px; color: #646a6e; font-style: italic; margin: 4px 0 0; }
+.data-cite {
+  background: #f6f6f4; border: 1px solid #ececec; border-radius: 0;
+  padding: 12px 15px; margin: 0 0 10px; font-size: 13px; color: #4a4f4e;
+  line-height: 1.55; letter-spacing: normal;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.data-cite p { margin: 0 0 6px; }
+.data-cite .cite-head { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+.data-cite ul { margin: 0; padding-left: 18px; }
+.data-cite li { margin-bottom: 6px; }
+.data-cite li:last-child { margin-bottom: 0; }
+.data-cite a { text-decoration: underline; overflow-wrap: break-word; }
+.data-img { display: block; width: 500px; max-width: 100%; height: auto; margin: 8px 0 12px; border: 1px solid #000; }
 .me { font-weight: 400; color: #3f4443; }            /* 본인 이름 색 */
 .contact-line { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; padding-left: 3px; }   /* Contact 이메일 줄 */
 .pub-link { text-decoration: underline; margin-left: 7px; }  /* Paper·Website·Code 링크 */
@@ -188,6 +213,15 @@ a.title-link:hover { color: inherit; text-decoration: underline; }   /* 제목 �
   vertical-align: middle; position: relative; top: -1px;
 }
 .media-badge:hover { background: #f1e2c9; }
+.data-badge {                /* Gage Data & Code 배지 (핑크/브릭레드) */
+  display: inline-block; margin-left: 9px; padding: 0.5px 6px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 10px; font-weight: 400; line-height: 1.5;
+  color: #3f7a47; background: #e8f3e6; border-radius: 6px;
+  text-decoration: none; letter-spacing: normal;
+  vertical-align: middle; position: relative; top: -1px;
+}
+.data-badge:hover { background: #dcecd7; }
 .pub-foot { color: #868e92; font-size: 12px; margin: -6px 0 14px 3px; }  /* 작은 회색 노트 */
 .predoc-head { margin-top: 72px; color: #1a1a1a; }   /* 예비박사 헤딩: 간격 + 어두운 색 */
 summary.predoc-head { cursor: pointer; list-style: none; }   /* 클릭 가능 */

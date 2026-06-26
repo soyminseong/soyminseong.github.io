@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Data 페이지 (데이터 크롤링 스크립트 공유) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data | Minseong Kang</title>
+  <!-- GoatCounter (쿠키 없는 방문 통계) -->
+  <script data-goatcounter="https://soyminseong.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W3YGVCZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W3YGVCZ0');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+
+  <!-- ===== 상단 네비게이션 ===== -->
+  <nav class="topnav">
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="https://www.dropbox.com/scl/fi/48osibfijt5z0mf38jp2m/Curriculum-Vitae.pdf?rlkey=xd2ae0v0qjxoqb2pn10fdlskb&e=1&st=66lctk7c&dl=0" target="_blank">CV</a>
+      <a href="publications.html">Publications</a>
+      <span class="nav-dropdown">
+        <a class="nav-more active" onclick="this.parentNode.classList.toggle('open')">More <span class="caret">▾</span></a>
+        <span class="dropdown-menu">
+          <a href="teaching.html">Teaching</a>
+          <a href="extension.html">Extension</a>
+          <a href="data.html" class="active">Data</a>
+        </span>
+      </span>
+    </div>
+  </nav>
+
+  <!-- ===== Data ===== -->
+  <section id="data" class="block">
+
+    <!-- ▼ 본인이 만든 데이터 크롤링 스크립트를 아래 형식으로 추가하면 됩니다. -->
+    <h3 class="pub-cat">Data &amp; Code</h3>
+    <p class="data-intro">This page contains the scripts I wrote to collect and crawl data for my work.</p>
+
+    <article class="pub-item">
+      <details class="data-item" open>
+        <summary class="pub-title">River Gage Stage Data Puller</summary>
+        <img class="data-img" src="rivergages.png" alt="Map of river gages along the Mississippi mainstem" />
+        <div class="data-cite">
+          <p class="cite-head">Citation</p>
+          <p>The data are assembled for my working paper. If you use this dataset, please cite:</p>
+          <ul>
+            <li>Kang, M. and Lee, S. (2025) "<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5944294" target="_blank"><em>Extreme Weather and Trade Costs: Evidence from Mississippi River Drought</em></a>." SSRN Working Paper.</li>
+            <li>Underlying gage data: U.S. Army Corps of Engineers, RiverGages (<a href="https://rivergages.mvr.usace.army.mil/" target="_blank">https://rivergages.mvr.usace.army.mil/</a>), accessed June 26, 2026.</li>
+          </ul>
+        </div>
+        <p class="data-links"><a href="mississippi_river_gage_data.zip" download>Download CSV</a> · <a href="https://github.com/soyminseong/soyminseong.github.io/blob/main/pull_gages.py" target="_blank">Code (GitHub)</a> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5944294" target="_blank">Paper</a></p>
+        <p class="data-desc">Daily river-stage series for 106 USACE gages along the Mississippi
+        mainstem, with station coordinates. The script rebuilds the station list by name on each
+        run, and you can point it at any U.S. river (e.g., Arkansas, Illinois, etc.) by changing
+        one line.</p>
+      </details>
+    </article>
+
+  </section>
+
+  <!-- ===== 하단 ===== -->
+  <footer>
+    <p>© 2026 Minseong Kang</p>
+  </footer>
+
+</main>
+</body>
+</html>
